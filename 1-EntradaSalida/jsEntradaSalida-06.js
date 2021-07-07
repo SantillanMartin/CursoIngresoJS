@@ -12,12 +12,13 @@ let mensaje;
 
 numeroIngresado1=document.getElementById("txtIdNumeroUno").value;
 numeroIngresado1=parseInt(numeroIngresado1);
+
 numeroIngresado2=document.getElementById("txtIdNumeroDos").value;
 numeroIngresado2=parseInt(numeroIngresado2);
 
 suma=numeroIngresado1+numeroIngresado2;
 
-mensaje="El resultado obtenido es "+suma;
+mensaje="El resultado obtenido es : "+suma;
 alert(mensaje);
 
 
