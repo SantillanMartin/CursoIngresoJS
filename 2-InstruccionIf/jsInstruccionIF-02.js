@@ -1,7 +1,25 @@
+/*
+Autor: Martin Santillan
+Ejercicio IF 2
+Al ingresar una edad 
+debemos informar solo si la persona es mayor de edad
+*/
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
 	
+var edad;
+var mensaje;
 
-}//FIN DE LA FUNCIÓN
+edad=document.getElementById("txtIdEdad").value;
+
+if(edad>17)
+{
+	mensaje="Es mayor de edad"
+
+	};
+
+
+	alert(mensaje);
+
+}

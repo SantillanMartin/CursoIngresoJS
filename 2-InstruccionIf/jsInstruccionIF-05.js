@@ -1,6 +1,27 @@
+/*Autor: Martin Santillan
+Ejercicio IF 5
+Al ingresar una edad solo debemos informar
+ si la persona NO es adolescente.
+
+*/
+
 function mostrar()
 {
-	//tomo la edad  
-	alert("ok");
+ 
+	var edad;
+	var mensaje;
+	
+	edad=document.getElementById("txtIdEdad").value;
+	edad=parseInt(edad);
 
-}//FIN DE LA FUNCIÓN
+	if(edad<13 || edad>18)
+		{
+			mensaje="no es adolescente"
+
+
+
+		}
+
+
+		alert(mensaje);
+}

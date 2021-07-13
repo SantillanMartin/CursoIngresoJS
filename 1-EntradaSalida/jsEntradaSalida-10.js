@@ -13,7 +13,8 @@ function mostrarAumento()
 	let porcentajeDeDescuentoIngresado;
 	let porcentajeAplicado;
 	let descuentoTotal;
-	
+	//entrada de datos
+
 	importe=document.getElementById("txtIdImporte").value;
 	importe=parseInt(importe);
 
@@ -21,9 +22,12 @@ function mostrarAumento()
 	porcentajeDeDescuentoIngresado=parseInt(porcentajeDeDescuentoIngresado);
 
 
-	porcentajeAplicado=(importe*porcentajeDeDescuentoIngresado)/100;
-	porcentajeAplicado=parseInt(porcentajeAplicado);
+	//proceso de datos
 
+	porcentajeAplicado=(importe*porcentajeDeDescuentoIngresado)/100;
+	//porcentajeAplicado=parseInt(porcentajeAplicado);
+
+	//salida de datos
 	descuentoTotal=importe-porcentajeAplicado;
 
 document.getElementById("txtIdResultado").value=descuentoTotal;

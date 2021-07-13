@@ -6,7 +6,16 @@ ej.: "la Resta es 750"*/
 function sumar()
 {	
 	alert("ok");	
+
+
+
+
+
+
+
+
 }
+
 
 function restar()
 {
