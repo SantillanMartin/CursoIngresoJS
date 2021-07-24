@@ -1,4 +1,6 @@
 /*
+Autor: Martin Santillan
+Ejercicio While 9
 Al presionar el botón pedir  números  hasta que el usuario quiera,
 mostrar el número máximo y el número mínimo ingresado.*/
 function mostrar()
@@ -11,11 +13,34 @@ function mostrar()
 	//iniciar variables
 	banderaDelPrimero="es el primero";
 	respuesta='si';
+
+	
+
 	while(respuesta=="si")
 	{
-		
+		numeroIngresado=prompt("Ingrese el numero");
+		numeroIngresado=parseInt(numeroIngresado);
+
+		if(banderaDelPrimero=="es el primero")
+		{
+			banderaDelPrimero="ya paso";
+			numeroMaximo=numeroIngresado;
+			numeroMinimo=numeroIngresado;
+		}else
+		{
+			if(numeroMaximo>numeroIngresado)
+			{
+				numeroMaximo=numeroIngresado;
+
+			}
+			if(numeroMinimo<numeroIngresado)
+			{
+				numeroMinimo=numeroIngresado;
+			}
+
+		}
 		respuesta=prompt("desea continuar?");
 	}
 	txtIdMaximo.value=numeroMaximo;
-	txtIdMinimmo.value=numeroMinimo;
+	txtIdMinimo.value=numeroMinimo;
 }//FIN DE LA FUNCIÓN

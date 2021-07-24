@@ -1,10 +1,30 @@
+/*
+Autor: Martin Santillan
+Ejercicio SWITCH 2
+*/
 function mostrar()
 {
-	//tomo el mes
-	var mesDelAño =txtIdMes.value;
-	alert(mesDelAño);
+	var mesDelAño;
+	var mensaje;
 
 
+	mesDelAño=document.getElementById("txtIdMes").value;
 
+	switch(mesDelAño)
+	{
+		case "Julio":
+		case "Agosto":
+			mensaje="Abrigate que hace frio";
+		break;
+		case "Abril":
+		case "Mayo":
+		case "Junio":
+			mensaje="Falta para el invierno";
+		break;
+		default:
+			mensaje="Ya pasamos el frio, ahora calor!!!.";
+		break;
+	}
 
-}//FIN DE LA FUNCIÓN
+	alert(mensaje);
+}

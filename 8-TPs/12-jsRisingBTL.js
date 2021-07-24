@@ -14,6 +14,56 @@ function ComenzarIngreso ()
  	var sexoIngresado;
  	var estadoCivilIngresado;
 
+//A. EDAD.
 
+/*	edadIngresada=prompt("Ingrese su edad");
+
+	while(edadIngresada<18 || edadIngresada>90)
+	{
+		alert("La edad ingresada es incorrecta");
+		edadIngresada=prompt("Ingrese su edad nuevamente");
+
+	}
+
+	document.getElementById("txtIdEdad").value=edadIngresada;
+
+	//B SEXO.
+
+	sexoIngresado=prompt("Ingrese su sexo, siendo M para masculino y F para femenino");
+
+	while(sexoIngresado!="M"&& sexoIngresado!="F")
+	{
+		alert("Usted ingreso un sexo erroneo");
+		sexoIngresado=prompt("Ingrese su sexo nuevamente");
+	}
+
+	document.getElementById("txtIdSexo").value=sexoIngresado;
+*/
+	//C ESTADO CIVIL.
+
+	estadoCivilIngresado=prompt("Ingrese su estado civil siendo: 1 para soltero/a,2 para casado/a,3 para divorciado/a y 4 para viudo/a");
+
+	while(estadoCivilIngresado<1 || estadoCivilIngresado>4)
+	{
+		estadoCivilIngresado=prompt("Ingrese su estado civil nuevamente");
+
+	}
+	switch(estadoCivilIngresado)
+	{
+		case "1":
+			estadoCivilIngresado="Soltero/a";
+		break;
+		case "2":
+			estadoCivilIngresado="Casado/a";
+		break;
+		case "3":
+			estadoCivilIngresado="Divorciado/a";
+		break;
+		default:
+			estadoCivilIngresado="Viudo/a";
+		break;
+	}
+
+	document.getElementById("txtIdEstadoCivil").value=estadoCivilIngresado;
 
 }

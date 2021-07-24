@@ -17,7 +17,7 @@ function mostrar()
 
 		if(edad>17)
 		{
-			mensaje="es mayor de edad";
+			mensaje="es mayor de edad"; 
 
 		}
 		else
