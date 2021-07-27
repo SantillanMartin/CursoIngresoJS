@@ -1,4 +1,7 @@
-/*RISING BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar una carga de datos validada e ingresada por ventanas emergentes solamente (para evitar hacking y cargas maliciosas) y luego asignarla a cuadros de textos. 
+/*
+Autor: Martin Santillan
+TP N°12
+RISING BTL. Empresa dedicada a la toma de datos para realizar estadísticas y censos nos pide realizar una carga de datos validada e ingresada por ventanas emergentes solamente (para evitar hacking y cargas maliciosas) y luego asignarla a cuadros de textos. 
 12.   Los datos requeridos son los siguientes:
 A.	Edad, entre 18 y 90 años inclusive.
 B.	Sexo, “M” para masculino y “F” para femenino
@@ -13,15 +16,20 @@ function ComenzarIngreso ()
  	var edadIngresada;
  	var sexoIngresado;
  	var estadoCivilIngresado;
+	var sueldoBruto;
+	var legajo;
+	var nacionalidad;
 
 //A. EDAD.
 
-/*	edadIngresada=prompt("Ingrese su edad");
+	edadIngresada=prompt("Ingrese su edad");
+	edadIngresada=parseInt(edadIngresada);
 
 	while(edadIngresada<18 || edadIngresada>90)
 	{
 		alert("La edad ingresada es incorrecta");
 		edadIngresada=prompt("Ingrese su edad nuevamente");
+		
 
 	}
 
@@ -38,7 +46,7 @@ function ComenzarIngreso ()
 	}
 
 	document.getElementById("txtIdSexo").value=sexoIngresado;
-*/
+
 	//C ESTADO CIVIL.
 
 	estadoCivilIngresado=prompt("Ingrese su estado civil siendo: 1 para soltero/a,2 para casado/a,3 para divorciado/a y 4 para viudo/a");
@@ -65,5 +73,62 @@ function ComenzarIngreso ()
 	}
 
 	document.getElementById("txtIdEstadoCivil").value=estadoCivilIngresado;
+
+
+
+	// D. SUELDO BRUTO
+
+	sueldoBruto=prompt("Ingrese su sueldo bruto");
+	sueldoBruto=parseInt(sueldoBruto);
+
+	while(sueldoBruto<"8000")
+	{
+		alert("Error el sueldo ingresado es menor a 8000");
+		sueldoBruto=prompt("Ingrese su sueldo bruto nuevamente");
+	}
+
+	document.getElementById("txtIdSueldo").value=sueldoBruto;
+
+
+	// E. LEGAJO
+
+	legajo=prompt("Ingrese su numero de legajo");
+	legajo=parseInt(legajo);
+
+	while(legajo<1000 || legajo>9999)
+	{
+		alert("El numero de legajo es incorrecto");
+		legajo=prompt("Ingrese el numero de legajo nuevamente");
+	}
+
+	document.getElementById("txtIdLegajo").value=legajo;
+
+	//F. NACIONALIDAD
+
+	nacionalidad=prompt("Ingrese su nacionalidad siendo A para Argentinos, E para extranjeros y N para naturalizados");
+
+	while(nacionalidad !="A" && nacionalidad !="E" && nacionalidad!="N")
+	{
+		alert("El dato ingresado es incorrecto");
+		nacionalidad=prompt("Ingrese nuevamente su nacionalidad");
+	}
+
+	switch(nacionalidad)
+	{
+		case "A":
+			nacionalidad="Argentino";
+		break;
+		case "E":
+			nacionalidad="Extranjero";
+		break;
+		default:
+			nacionalidad="Naturalizado";
+		break;
+	}
+
+	document.getElementById("txtIdNacionalidad").value=nacionalidad;
+
+
+
 
 }
