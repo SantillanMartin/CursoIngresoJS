@@ -62,55 +62,82 @@ while(respuesta=="si")
         notaFinal=prompt("Ingrese su nota nuevamente");
     }
 
+    
+    
     if(notaFinal>6 && sexo=="M") //se aprueba con 6
     {
-    
         varonesAprobados=varonesAprobados+1;
-    
-}
 
-if(edad>17)
-{
-    contadorMayores++;
-    acumuladorNotasMayores=acumuladorNotasMayores+notaFinal;
-}else
-{
-    if(edad<14)
+    }
+    
+    if(edad>17)
     {
-        contadorMenores++;
-        acumuladorNotasMenores=acumuladorNotasMenores+notaFinal;
+        contadorMayores++;
+        acumuladorNotasMayores=acumuladorNotasMayores+notaFinal;
     }else
     {
-        contadorAdolescentes++;
-        acumuladorNotasAdolescentes=acumuladorNotasAdolescentes+notaFinal;
+        if(edad<14)
+        {
+            contadorMenores++;
+            acumuladorNotasMenores=acumuladorNotasMenores+notaFinal;
+        }else
+        {
+            contadorAdolescentes++;
+            acumuladorNotasAdolescentes=acumuladorNotasAdolescentes+notaFinal;
+        }
     }
-}
 
-if(sexo=="F")
-{
-    contadorFemeninos++;
-    acumuladorNotasFemenino=acumuladorNotasFemenino+notaFinal;
-}else
-{
-    contadorMasculinos++;
-    acumuladorNotasMasculino=acumuladorNotasMasculino+notaFinal;
-}
+    if(sexo=="F")
+    {
+     contadorFemeninos++;
+        acumuladorNotasFemenino=acumuladorNotasFemenino+notaFinal;
+    }else
+    {
+        contadorMasculinos++;
+        acumuladorNotasMasculino=acumuladorNotasMasculino+notaFinal;
+    }
 
-
-
-
-
-
-
-respuesta=prompt("Desea seguir cargando datos?");
+    respuesta=prompt("¿Desea seguir cargando datos?");
 
 }//fin del while
+if(contadorMayores>0)
+{
+    promedioNotasMayores=acumuladorNotasMayores/contadorMayores;
+}else
+{
+    promedioNotasMayores=0;
+}
+if(contadorAdolescentes>0)
+{
+    promedioNotasAdolescentes=acumuladorNotasAdolescentes/contadorAdolescentes;
 
-promedioNotasMayores=acumuladorNotasMayores/contadorMayores;
-promedioNotasAdolescentes=acumuladorNotasAdolescentes/contadorAdolescentes;
-promedioNotasMenores=acumuladorNotasMenores/contadorMenores;
-promedioNotasMasculinos=acumuladorNotasMasculino/contadorMasculinos;
-promedioNotasFemeninos=acumuladorNotasFemenino/contadorFemeninos;
+}else
+{
+    promedioNotasAdolescentes=0;
+}
+if(contadorMenores>0)
+{
+    promedioNotasMenores=acumuladorNotasMenores/contadorMenores;
+}else
+{
+    promedioNotasMenores=0;
+}
+if(contadorMasculinos>0)
+{
+    promedioNotasMasculinos=acumuladorNotasMasculino/contadorMasculinos;
+
+}else
+{
+    promedioNotasMasculinos=0;
+}
+if(contadorFemeninos>0)
+{
+    promedioNotasFemeninos=acumuladorNotasFemenino/contadorFemeninos;
+
+}else
+{
+    promedioNotasFemeninos=0;
+}
 
 
 document.write("<br>la cantidad de varones aprobados es: "+varonesAprobados);
